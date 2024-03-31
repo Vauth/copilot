@@ -3,7 +3,7 @@
 ```python
 print(GetAccessToken())
 ```
-#### Replace it with `ACCESS_TOKEN` in `main.py` .
+#### Replace the output with `ACCESS_TOKEN` in `main.py` .
 ### 🚀 Run
 ```python
 print(Copilot("Hello world app with python"))
