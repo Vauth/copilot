@@ -4,6 +4,9 @@ SAVED FOR FUTURE USE
 import requests
 import time
 
+# Insert access token here
+ACCESS_TOKEN = 'YOUR TOKEN' # Use GetAccessToken()
+
 #Get access token
 def GetAccessToken():
     Loginheaders = {
@@ -33,9 +36,9 @@ def GetAccessToken():
     return oauth['access_token']
 
 #Get worker token
-def GetToken(accesstoken:str):
+def GetToken():
     headers = {
-        'authorization': f'token {accesstoken}',
+        'authorization': f'token {ACCESS_TOKEN}',
         'editor-version': 'vscode/1.80.1',
         'editor-plugin-version': 'copilot.vim/1.16.0',
         'user-agent': 'GithubCopilot/1.155.0'
