@@ -6,9 +6,10 @@ import time
 
 # Insert access token here
 ACCESS_TOKEN = 'YOUR TOKEN' # Use GetAccessToken()
+MODEL = 'gpt-4' # Read README.md
 
 #Get access token
-def GetAccessToken():
+def GetAccessToken() -> str:
     Loginheaders = {
         'accept': 'application/json',
         'editor-version': 'Neovim/0.6.1',
@@ -36,7 +37,7 @@ def GetAccessToken():
     return oauth['access_token']
 
 #Get worker token
-def GetToken():
+def GetToken() -> str:
     headers = {
         'authorization': f'token {ACCESS_TOKEN}',
         'editor-version': 'vscode/1.80.1',
@@ -48,14 +49,14 @@ def GetToken():
 
 
 #Ask Anything
-def Copilot(prompt:str):
+def Copilot(prompt:str) -> str:
     headers={
         'authorization': f'Bearer {GetToken()}',
         'Editor-Version': 'vscode/1.80.1'
     }
     json={
         "messages":[{"role": "system", "content": prompt}],
-        "model":"gpt-4",
+        "model": MODEL,
         "temperature":0.4,
         "role":"system"
     }
