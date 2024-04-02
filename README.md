@@ -1,6 +1,6 @@
 # Github Copilot Completions
 ### 🗝 Signup copilot:
-#### First signup for [github copilot](https://github.com/github-copilot/signup) in order to activate the worker != (`ERROR: Resource not accessible by integration`) .
+#### First signup for [github copilot](https://github.com/github-copilot/signup) in order to activate the worker, or (`ERROR: Resource not accessible by integration`) .
 ### 🔗 Get access token:
 ```python
 print(GetAccessToken())
